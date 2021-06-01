@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <!--Main Style link-->
+  <link rel="stylesheet" href="./css/style.css">
+  <!--Font Awesome CDN-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+    integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="display-box">
+
+
+      <div class="title-bar">
+        <div class="ico close"><i class="fas fa-times"></i></div>
+        <div class="ico expand"><i class="fas fa-minus"></i></div>
+        <div class="ico minimize"><i class="far fa-window-maximize"></i></div>
+      </div>
+
+      <div class="result-box" contenteditable="true"></div>
+      <div class="operate-box">
+        <div class="history"><i class="fas fa-history"></i></div>
+        <div class="operation"></div>
+      </div>
+    </div>
+    <div class="input-box">
+      <div class="operator">C</div>
+      <div class="operator">+/-</div>
+      <div class="operator"><i class="fas fa-percentage"></i></div>
+      <div class="operator" onclick="operator('/')"><i class="fas fa-divide"></i></div>
+
+      <div class="operand" onclick="operand('7')">7</div>
+      <div class="operand" onclick="operand('8')">8</div>
+      <div class="operand" onclick="operand('9')">9</div>
+      <div class="operator" onclick="operator('*')"><i class="fas fa-times"></i></div>
+
+      <div class="operand" onclick="operand('4')">4</div>
+      <div class="operand" onclick="operand('5')">5</div>
+      <div class="operand" onclick="operand('6')">6</div>
+      <div class="operator" onclick="operator('-')"><i class="fas fa-minus"></i></div>
+
+      <div class="operand" onclick="operand('1')">1</div>
+      <div class="operand" onclick="operand('2')">2</div>
+      <div class="operand" onclick="operand('3')">3</div>
+      <div class="operator" onclick="operator('+')"><i class="fas fa-plus"></i></div>
+
+      <div class="operand" onclick="operand(0)">0</div>
+      <div class="operand">.</div>
+      <div class="operator"><i class="fas fa-backspace"></i></div>
+      <div class="operator" onclick="equal()"><i class="fas fa-equals"></i></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
