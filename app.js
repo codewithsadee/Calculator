@@ -1,6 +1,11 @@
+var claculator = {
+  resultBox: document.querySelector(".result-box"),
+  operation: document.querySelector(".operation"),
+}
+
 
 function operand(number) {
-  document.querySelector(".result-box").innerHTML += number;
+  claculator.resultBox.innerHTML += number;
 }
 
 
@@ -12,9 +17,9 @@ function operator(x) {
   var resultBoxTxt = document.querySelector(".result-box").innerText;
   operateNumber = Number(resultBoxTxt);
   operatorSyntext = x;
-  document.querySelector(".operation").innerHTML += resultBoxTxt;
-  document.querySelector(".operation").innerHTML += x;
-  document.querySelector(".result-box").innerHTML = "";
+  claculator.operation.innerHTML += resultBoxTxt + x;
+  // claculator.operation.innerHTML += x;
+  claculator.resultBox.innerHTML = "";
 }
 
 function equal() {
@@ -24,22 +29,22 @@ function equal() {
 }
 function statement() {
   if (operatorSyntext == '+') {
-    document.querySelector(".result-box").innerHTML = operateNumber + operatorNumber2;
+    claculator.resultBox.innerHTML = operateNumber + operatorNumber2;
   } else if (operatorSyntext == '-') {
-    document.querySelector(".result-box").innerHTML = operateNumber - operatorNumber2;
+    claculator.resultBox.innerHTML = operateNumber - operatorNumber2;
   } else if (operatorSyntext == '*') {
-    document.querySelector(".result-box").innerHTML = operateNumber * operatorNumber2;
+    claculator.resultBox.innerHTML = operateNumber * operatorNumber2;
   } else if (operatorSyntext == '/') {
-    document.querySelector(".result-box").innerHTML = operateNumber / operatorNumber2;
+    claculator.resultBox.innerHTML = operateNumber / operatorNumber2;
   } else if (operatorSyntext == '%') {
-    document.querySelector(".result-box").innerHTML = operateNumber % operatorNumber2;
+    claculator.resultBox.innerHTML = operateNumber % operatorNumber2;
   }
 
 }
 
 function clearAll() {
-  document.querySelector(".result-box").innerHTML = "";
-  document.querySelector(".operation").innerHTML = "";
+  claculator.resultBox.innerHTML = "";
+  claculator.operation.innerHTML = "";
 }
 
 console.log(array)
